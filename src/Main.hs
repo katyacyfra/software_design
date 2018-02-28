@@ -4,8 +4,9 @@ import Parse (parseLine)
 import Environment
 import Sentence
 import System.IO.Error (catchIOError)
-import Control.Monad.State (runStateT, StateT, State, lift, modify, get)
-import Control.Monad.Except (runExcept)
+import System.IO (hFlush, stdout)
+import Control.Monad.State (runStateT, StateT, State, modify, get, liftIO)
+import Control.Monad.Except (runExcept, lift)
 
 runPipeline :: [IOCommand] -> IO String
 runPipeline = (`catchIOError` (pure . show)) . foldl (>>=) (pure "")
@@ -25,10 +26,11 @@ eval s = do env <- get
               Left e -> pure $ show e
 
 mainLoop :: StateT Environment IO ()
-mainLoop = do lift (putStr ">")
-              s <- lift getLine
+mainLoop = do liftIO (putStr ">")
+              liftIO (hFlush stdout)
+              s <- liftIO getLine
               r <- eval s
-              lift $ if not (null r) && last r /= '\n'
+              liftIO $ if not (null r) && last r /= '\n'
                   then putStrLn r
                   else putStr r
               mainLoop
