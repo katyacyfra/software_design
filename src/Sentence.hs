@@ -14,7 +14,7 @@ data Command = Run -- ^ A plain command
              { key   :: String -- ^ The name of the variable
              , value :: String -- ^ The value of the variable
              }
-             deriving (Show)
+             deriving (Eq, Show)
 
 -- | A group of commands chained into a pipeline
 type Pipeline = [Command]

@@ -34,5 +34,8 @@ test-suite test-cli
                        directory,
                        process,
                        parsec,
-                       mtl
-  hs-source-dirs:      test
+                       mtl,
+                       HUnit
+  hs-source-dirs:      test, src
+  other-modules:       CommandTest, ParseTest, SentenceTest, Command,
+                       Environment, Parse, Sentence, String

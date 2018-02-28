@@ -8,13 +8,14 @@ import Control.Monad.Except (Except, throwError)
 -- | A component of which a single string token consists
 data StringPart = Plain String -- ^ Plain string
                 | Var String   -- ^ A variable
-                  deriving (Show)
+                  deriving (Show, Eq)
 
 -- | A single string token that hasn't yet been interpolated
 type UString = [StringPart]
 
 -- | An error indicating that a variable couldn't be found in the environment
 newtype InterpolationError = UnknownToken String
+             deriving (Eq)
 
 instance Show InterpolationError where
     show (UnknownToken s) = "Unset variable '$" ++ s ++ "\""
