@@ -19,7 +19,7 @@ executable spbau-software-design-cli
   main-is:             Main.hs
   other-modules:       Command, Parse, Environment, String, Sentence
   -- other-extensions:    
-  build-depends:       base >=4.10 && <4.11,
+  build-depends:       base >=4.09 && <4.11,
                        directory,
                        process,
                        parsec,
@@ -30,7 +30,7 @@ executable spbau-software-design-cli
 test-suite test-cli
   type:                exitcode-stdio-1.0
   main-is:             Main.hs
-  build-depends:       base >=4.10 && <4.11,
+  build-depends:       base >=4.09 && <4.11,
                        directory,
                        process,
                        parsec,
