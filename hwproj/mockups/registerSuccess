@@ -1,0 +1,3 @@
+A confirmation will be sent to your email address. After confirming, you will
+be able to receive an authentification key by running `hwproj login $LOGIN`
+with the variable `$PASSWORD` set to the password you chose during registration.

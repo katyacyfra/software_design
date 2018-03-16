@@ -1,0 +1,23 @@
+ID: 1
+NAME: Vasya Pupkin
+DATE: Fri, 16 Mar 2018 13:20:57 +0300
+PARENT: 
+<<EOF
+What a nice course!
+EOF
+
+ID: 2
+NAME: Nikolay Durnev
+DATE: Fri, 16 Mar 2018 13:22:08 +0300
+PARENT: 
+<<EOF
+I love the course!
+EOF
+
+ID: 3
+NAME: Author Author
+DATE: Fri, 16 Mar 2018 13:22:54 +0300
+PARENT: 1
+<<EOF
+Vasya, thank you!
+EOF
