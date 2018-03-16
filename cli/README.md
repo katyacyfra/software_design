@@ -31,3 +31,16 @@ The major modules are:
     substitutions haven't yet happened, and a function to substitute
     variables;
   * `Main` -- the main loop.
+
+Libraries used
+--------------
+
+  * `directory` -- for `pwd`;
+  * `process` -- for calling subprocesses;
+  * `parsec` -- for parsing the input;
+  * `mtl` -- for using monad transformers;
+  * `regex-tdfa` -- DFA for regular expressions in `grep`.
+
+`grep` parses its command line arguments using the standard library.
+It makes sense because the use case is as simple as they get, and
+the standard library is installed everywhere.
