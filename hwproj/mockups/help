@@ -1,0 +1,29 @@
+hwProj -- console-based version of hwProj.me.
+
+Syntax:
+
+  hwProj register USER -- register USER.
+  hwProj login USER -- login as USER.
+
+    Password should be provided as an environmental variable PASSWORD.
+
+  All the other commands should be run with the AUTH_KEY variable set to a
+  valid authentication key.
+
+  hwProj course COMMAND -- run command related to a course. Available commands
+    are:
+
+    * list -- list available courses
+    * enroll COURSE -- enroll in the course
+    * leave  COURSE -- leave the course
+    * tasks  COURSE -- list the course tasks
+    * stats  COURSE -- statistics on course
+    * comments COURSE -- read discussions of the course
+
+  hwProj task COMMAND -- run command related to a task
+
+    * list [COURSE] [--deadline DATE] -- list tasks
+    * put TASK_ID -- read the solution of a task from stdin
+    * comments TASK_ID -- print the comments on a task
+    * comment TASK_ID [PARENT_ID] -- read a new comment from stdin
+    * get TASK_ID -- print the statement of a task
