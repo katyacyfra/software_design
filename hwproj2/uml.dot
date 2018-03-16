@@ -1,0 +1,23 @@
+digraph activity_diagram {
+  # Intermediary states
+  entry    [shape=point]
+
+  # Transitions
+  entry    -> start
+  start    -> login
+  start    -> register
+  register -> register[label="провал"]
+  register -> login
+  login    -> login[label="провал"]
+  login    -> start
+  start    -> courses
+  start    -> tasks
+  tasks    -> start
+  courses  -> login
+  courses  -> course
+  course   -> tasks
+  tasks    -> send
+  send     -> start
+
+  # Labels
+}
