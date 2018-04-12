@@ -37,5 +37,5 @@ test-suite test-cli
                        mtl,
                        HUnit
   hs-source-dirs:      test, src
-  other-modules:       CommandTest, ParseTest, SentenceTest, Command,
-                       Environment, Parse, Sentence, String
+  other-modules:       Command, CommandTest, ParseTest, SentenceTest, 
+                       Environment, Parse, Sentence, String, CdLsTest
